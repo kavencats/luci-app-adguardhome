@@ -197,7 +197,7 @@ jobs:
             base=$(basename "$f")
             pkgname=$(echo "$base" | sed -E 's/^([^_]+)_.*$/\1/')
             echo "Cleaning old versions of $pkgname"
-            rm -f custom-packages/luci/${pkgname}_*.ipk
+            rm -f custom-packages/luci/${pkgname}_*.apk
             cp "$f" custom-packages/luci/
           done
           ls -la custom-packages/luci/
