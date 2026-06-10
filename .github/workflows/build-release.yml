@@ -69,10 +69,16 @@ jobs:
       matrix:
         include:
           - version: openwrt-24.10
-            target: x86_64
+            target: aarch64_cortex-a53
             suffix: all
           - version: openwrt-25.12
-            target: x86_64
+            target: aarch64_cortex-a53
+            suffix: noarch
+          - version: openwrt-24.10
+            target: mipsel_24kc
+            suffix: all
+          - version: openwrt-25.12
+            target: mipsel_24kc
             suffix: noarch
 
     steps:
